@@ -1,6 +1,6 @@
-let text ='PAPER' //user input not case sensitive
-let userInput = text.toLowerCase()
-console.log(`Your play: ${userInput}`)
+let text ='rock' //user input not case sensitive
+const playerSelection = text.toLowerCase()
+console.log(`Your play: ${playerSelection}`)
 
 // computer play
 let computerSelection = Math.random()
@@ -14,24 +14,24 @@ else if(computerSelection >.33 && computerSelection <.67){
 else if(computerSelection >.67){
     computerSelection = 'scissors'
 }
-console.log(`Computer plays: ${computerSelection}`)
+console.log(`Computer plays: ${computerSelection}`)// prints computerSelection
 
 
 
-let declareLoser = 'You lose! Try again.' //player loses
+let declareLoser = `You lose ${computerSelection} beats ${playerSelection}! Try again.` //player loses
 let declareTie = 'Tie! Try again!' //declares tie
-let declareWinner = 'You\'re a winner!' //player wins
+let declareWinner = `You\'re a winner! ${playerSelection} beats ${computerSelection}`  //player wins
 
 
 
-if ((userInput ==='rock' && computerSelection === 'rock')||(userInput=== 'paper' && computerSelection === 'paper')||(userInput === 'scissors' && computerSelection === 'scissors')){
+if ((playerSelection ==='rock' && computerSelection === 'rock')||(playerSelection=== 'paper' && computerSelection === 'paper')||(playerSelection === 'scissors' && computerSelection === 'scissors')){
     console.log(declareTie)
 }
 
-else if((userInput ==='rock' && computerSelection === 'scissors')||(userInput === 'paper' && computerSelection ==='rock')||(userInput === 'scissors' && computerSelection === 'paper')){
+else if((playerSelection ==='rock' && computerSelection === 'scissors')||(playerSelection === 'paper' && computerSelection ==='rock')||(playerSelection === 'scissors' && computerSelection === 'paper')){
     console.log(declareWinner)
 }
 
-else if((userInput === 'rock' && computerSelection === 'paper')||(userInput === 'paper' && computerSelection === 'scissors')||(userInput === 'scissors' && computerSelection === 'rock')){
+else if((playerSelection === 'rock' && computerSelection === 'paper')||(playerSelection === 'paper' && computerSelection === 'scissors')||(playerSelection === 'scissors' && computerSelection === 'rock')){
     console.log(declareLoser)
 }
